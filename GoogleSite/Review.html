@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Review Card</title>
+</head>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.review-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.2s;
+    animation: slideUp 0.5s ease-out;
+    margin-top: 30vh; /* อันนี้ห่างจากด้านบน */
+}
+
+.review-card:hover {
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-content p {
+    font-size: 14px;
+    color: #555555;
+    margin: 10px 0;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info strong {
+    font-size: 16px;
+    color: #333333;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.rating span {
+    color: #ffcc00;
+    font-size: 20px;
+}
+
+/* อันนี้ทำให้เลื่อขึ้นไงครับคนดู */
+@keyframes slideUp {
+    from {
+        transform: translateY(50%); /* ปรับเลื่อนขึ้นมากแค่ไหนครับไอ้สัส */
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/* อันนี้ทำให้เลื่อขึ้นไงครับคนดู จบบบบ */
+
+</style>
+
+<body>
+    <!-- review box -->
+    <div class="review-card">
+        <div class="name-profile">
+            <h3>👨‍💼</h3>
+        </div>
+        <strong>kon</strong>
+        <div class="review-content">
+            <p>This restaurant is very good.</p>
+            <div class="user-info">
+                <div class="rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- review box end -->
+   
+</body>
+</html>
