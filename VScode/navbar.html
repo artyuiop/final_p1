@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link   rel="shortcut icon" href="https://i.pinimg.com/474x/9e/1c/80/9e1c8072a07d34844c64fba1e23eb05c.jpg" type="image/x-icon">
+<body>
 </head>
 <body>
     <nav>
-        <div class="content">
+        <div class="container">
+            <div class="nav-con">
+                <div class="logo">
+                    <a href="#"><img src="https://i.pinimg.com/474x/9e/1c/80/9e1c8072a07d34844c64fba1e23eb05c.jpg" width="70px" height="70px" alt=""></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                    <!-- toggle menu  -->
+                <div class="burger-icon" id="hamicon" onclick="togglehamburger(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
 
+            </div>
+            <!-- add mobile respoin sive menu -->
+            <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </nav>
-    <script src="main.js"></script>
+
+     
+     <script src="main.js"></script>
 </body>
 </html>
