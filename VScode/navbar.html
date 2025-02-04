@@ -6,9 +6,110 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link   rel="shortcut icon" href="https://i.pinimg.com/474x/9e/1c/80/9e1c8072a07d34844c64fba1e23eb05c.jpg" type="image/x-icon">
-<body>
+
 </head>
+<style>
+    *{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    .burger-icon {
+
+    display: inline-block;
+    cursor: pointer;
+
+    @media screen and (min-width: 769px) {
+    display: none ;
+    }
+    }
+
+
+    .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff7f7;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+    }
+
+    .change .bar1 {
+
+    transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {
+    opacity: 0;}
+
+    .change .bar3 {
+
+    transform: translate(0, -11px) rotate(45deg);
+    }
+
+    nav {
+
+    box-shadow: 10px 10px 8px #888888;
+    padding: 1rem;
+    background-color: #222;
+
+    .nav-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    a {
+    color: #fff;
+    text-decoration: none;
+    }
+    }
+
+    .menu {
+    display: flex;
+    list-style: none;
+
+    li {
+    margin: 0 1rem;
+
+    a {
+    color: #fff;
+    text-decoration: none;
+    }
+    }
+    /* Add media 768px  */
+    @media screen and (max-width: 768px) {
+    display: none;
+    }
+    }
+    }
+    .mobile-menu {
+    list-style: none;
+    padding: 0;
+
+    @media screen and (min-width: 769px) {
+    display: none !important;
+    }
+    }
+
+    .mobile-menu li {
+    margin: 1rem 0;
+    }
+
+    .mobile-menu li a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center; 
+    }
+
+    }
+
+
+</style>
 <body>
     <nav>
         <div class="container">
@@ -41,6 +142,32 @@
     </nav>
 
      
-     <script src="main.js"></script>
+     <script>
+                // JavaScript Here
+        function togglehamburger(x) {
+            x.classList.toggle("change");
+        }
+
+        //  toggle mobile menu 
+
+        let menuicon = document.getElementById("hamicon");
+
+        if (menuicon) {
+            menuicon.addEventListener("click", function() {
+                let mobilemenu = document.getElementById("mobileMenu");
+                if (mobilemenu) {
+                    if (mobilemenu.style.display === "block") { // ถ้า display ตรงกับ block จะเป็น none 
+                        mobilemenu.style.display = "none"; // ถ้า display ตรงกับ none จะเป็น block 
+                    } else {
+                        mobilemenu.style.display = "block"; // ถ้าเป็น none อยู่แล้วจะเปลี่ยนเป็น block
+                    } 
+                } else {
+                    console.error("error mobilemenu : ");
+                }
+            })
+        } else {
+            console.error("error hamicon : ")
+        }
+     </script>
 </body>
 </html>
